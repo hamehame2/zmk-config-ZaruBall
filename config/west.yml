@@ -24,7 +24,7 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-    - name: eswai
+    - name:eswai
       url-base: https://github.com/eswai
       revision: main
     # - name: zmk-input-processor-keybind
