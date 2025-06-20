@@ -8,7 +8,7 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
     - name: eswai
-      url-base: https://github.com/eswa
+      url-base: https://github.com/eswai
     - name: ImSota
       url-base: https://github.com/ImSota
     # - name: zettaface
@@ -25,7 +25,7 @@ manifest:
       remote: caksoylar
       revision: main
     - name: zmk-naginata
-      remote: ImSota
+      remote: eswai
       revision: main
     # - name: zmk-input-processor-keybind
     #   remote: zettaface
