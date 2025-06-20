@@ -7,6 +7,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: eswai
+      url-base: https://github.com/eswa
     - name: ImSota
       url-base: https://github.com/ImSota
     # - name: zettaface
