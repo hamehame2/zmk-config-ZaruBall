@@ -72,7 +72,7 @@
             bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
         };
 
-        td2: tap_dance_1 {
+        td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
