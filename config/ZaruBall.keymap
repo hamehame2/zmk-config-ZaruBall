@@ -20,6 +20,8 @@
 #define ADJUST   5
 #define MOD      6
 #define SCROLL   3
+#define MUHEN   7
+#define HENKA   8
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -204,9 +206,9 @@
             bindings = <
 &kp ESC          &kp N1   &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp NUMBER_6  &kp N7  &kp N8 &kp N9 &kp N0 &kp INT_YEN
 &kp TAB          &kp SQT  &kp COMMA   &kp DOT       &kp P      &kp J                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp F         &kp G   &kp C  &kp R  &kp L  &kp SLASH
-&BL_mod LCTRL    &kp A    &kp O       &kp E         &kp U      &kp I               &td2           &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp EQUAL  &kp D         &kp H   &kp T  &kp N  &kp S  &kp MINUS
+&BL_mod LCTRL    &kp A    &kp O       &kp E         &kp U      &kp I               &td2               &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp EQUAL  &kp D         &kp H   &kp T  &kp N  &kp S  &kp MINUS
 &mt LSHFT PSCRN &kp SEMI &kp Q       &kp Y         &kp K      &kp X               &kp GRAVE         &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp B         &kp M   &kp W  &kp V  &kp Z  &lt SCROLL BACKSLASH
-&td0       &kp C_MUTE  &BL_mod LWIN  &kp INT5  &SandS LSHFT SPACE  &mo SCROLL                                                                    &lt RAISE RET  &kp BSPC                                            &td1
+&td0       &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &SandS LSHFT SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET  &lt HENKA RET                                            &td1
             >;
         };
 
@@ -218,7 +220,7 @@
 &trans    &ng Q   &ng W       &ng E        &ng R         &ng T                        &trans &trans &trans &trans            &ng Y   &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &trans    &ng A   &ng S       &ng D        &ng F         &ng G      &kp INS           &trans &trans &trans &trans  &trans    &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &trans    &ng Z   &ng X       &ng C        &ng V         &ng B      &kp GRAVE         &trans &trans &trans &trans  &trans    &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&trans            &trans      &BL_mod LWIN &kp INT5      &ng SPACE  &trans                                                   &trans  &ng SPACE                                           &trans
+&trans            &trans      &BL_mod LWIN &kp INT5      &ng SPACE  &trans                                             &lt HENK RET   &ng SPACE                                           &trans
             >;
         };
 
@@ -230,7 +232,7 @@
 &to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R       &to_layer_0 T                    &trans &trans &trans &trans                    &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O       &to_layer_0 P             &to_layer_0 EQUAL
 &to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 SINGLE_QUOTE  &to_layer_0 SEMICOLON
 &to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4        &mkp MB5        &to_layer_0 PERIOD  &to_layer_0 SLASH         &lt SCROLL BACKSLASH
-&trans              &trans                          &trans          &trans              &trans          &trans                                         &trans           &trans                                                              &trans
+&trans              &trans                          &trans          &lt MUHEN BSPC              &trans          &trans                                         &lt RAISE RET           &lt HENK RET                                                               &trans
             >;
         };
 
@@ -276,16 +278,40 @@
             bindings = <
 &kp ESC     &kp N1  &kp N2      &kp N3  &kp N4  &kp N5           &trans &trans &trans &trans             &kp N6    &kp N7  &kp N8  &kp N9     &kp N0   &kp MINUS
 &kp TAB     &kp Q   &kp W       &kp E   &kp R   &kp T            &trans &trans &trans &trans             &kp Y     &kp U   &kp I   &kp O      &kp P    &kp EQUAL
-&kp LCTRL   &kp A   &kp S       &kp D   &kp F   &kp G            &trans &trans &trans &trans  &kp INS    &kp LBKT  &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z   &kp X       &kp C   &kp V   &kp B            &trans &trans &trans &trans  &kp GRAVE  &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+&kp LCTRL   &kp A   &kp S       &kp D   &kp F   &kp G  &kp INS   &trans &trans &trans &trans  &kp LBKT  &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z   &kp X       &kp C   &kp V   &kp B  &kp GRAVE  &trans &trans &trans &trans  &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &lt HENK RET                               &trans
             >;
         };
 
         // Extra layer can be added in ZMK STUDIO
 
-        extra1 { status = "reserved"; };
+        MUHEN_layer {
+            display-name = "MUHEN";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&kp ESC     &kp LC(LS(N1)) &kp LC(LS(N2)) &kp LC(LS(N3)) &kp LC(LS(N4)) &kp LC(LS(N5))          &trans &trans &trans &trans             &kp LC(LS(N6)) &kp LC(LS(N7))   &kp LC(LS(N8)) &kp LC(LS(N9)) &kp LC(LS(N10)) &kp LC(LS(N11))
+&kp TAB     &kp HOME       &kp F17        &kp UP        &kp LS(RIGHT)   &kp END                 &trans &trans &trans &trans             &kp LALT       &kp LC(U)　      &kp TAB        &kp LC(O)      &kp LC(P)       &kp PG_DN
+&kp LCTRL   &kp LC(BSPC)   &kp LEFT       &kp DOWN      &kp RIGHT       &kp DEL &kp LOCKING_NUM &trans &trans &trans &trans  &kp LC(F8) &kp BSPC       &kp ESC          &kp LC(Z)      &kp LC(S)      &kp LC(F)       &mkp RCLK 
+&kp LSHFT   &kp LC(D)      &kp LC(X)      &kp  LC(C)    &kp LC(V)       &kp F16 &kp GRAVE       &trans &trans &trans &trans  &kp RBKT  &kp LC(LA(TAB)) &kp LC(LS(TAB))  &kp LC(Y)      &kp LC(TAB)    &kp LG(TAB)     &kp LG(D)
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+            >;
+        };
 
-        extra2 { status = "reserved"; };
+        HENKA_layer {
+            display-name = "HENKA";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&kp ESC     &kp LC(F1)   &kp LC(F2)   &kp LC(F3)   &kp LC(F4)     &kp LC(F5)               &trans &trans &trans &trans                    &kp LC(F6)       &kp LC(F7)       &kp LC(F8)       &kp LC(F9)        &kp LC(F10)   &kp LC(F11)
+&kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)              &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
+&kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp LOCKING_NUM  &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &mkp LC(END) 
+&kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp GRAVE       &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+            >;
+        };
+
+
+
+
     };
 };
