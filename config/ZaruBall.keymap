@@ -80,6 +80,7 @@
         };
 
 
+
         // Customed Hold-Tap for SandS
         // 他キーとの同時押しのみHold(Shift), 500m以上長押しすると、Tap(Space)のリピート
         SandS: SandS {
