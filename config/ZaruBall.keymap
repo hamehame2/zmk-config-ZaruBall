@@ -154,6 +154,28 @@
                 <&mo MOD>;
         };
 
+        MOD_CT_SH: mod_ctrl_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&trans>, <&macro_press_release_ctrl_shift>;
+        };
+
+        macro_press_release_ctrl_shift: macro_press_release_ctrl_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_press
+                &kp LCTRL
+                &kp LSHIFT
+                &macro_release
+                &kp LSHIFT
+                &kp LCTRL
+            >;
+        };
+
+
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -193,11 +215,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&kp LCTRL  &kp A   &kp S       &kp D     &kp F      &kp G               &kp INS           &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B               &kp GRAVE         &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &kp INT5  &kp SPACE  &mo SCROLL                                                                    &lt RAISE RET  &kp BSPC                                            &td1
+&kp ESC       &kp N1  &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB       &kp Q   &kp W       &kp E         &kp R      &kp T                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+&BL_mod LCTRL &kp A   &kp S       &kp D         &kp F      &kp G               &kp INS           &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&mo mod       &kp Z   &kp X       &kp C         &kp V      &kp B               &kp GRAVE         &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
+&td0               &kp C_MUTE  &BL_mod LWIN  &kp INT5  &kp SPACE  &mo SCROLL                                                                    &lt RAISE RET  &kp BSPC                                            &td1
             >;
         };
 
@@ -265,11 +287,11 @@
             display-name = "Mod";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC    &kp N1  &kp N2      &kp N3  &kp N4  &kp N5           &trans &trans &trans &trans             &kp N6    &kp N7  &kp N8  &kp N9     &kp N0   &kp MINUS
-&kp TAB    &kp Q   &kp W       &kp E   &kp R   &kp T            &trans &trans &trans &trans             &kp Y     &kp U   &kp I   &kp O      &kp P    &kp EQUAL
-&kp CAPS   &kp A   &kp S       &kp D   &kp F   &kp G            &trans &trans &trans &trans  &kp INS    &kp LBKT  &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&kp ESC     &kp N1  &kp N2      &kp N3  &kp N4  &kp N5           &trans &trans &trans &trans             &kp N6    &kp N7  &kp N8  &kp N9     &kp N0   &kp MINUS
+&kp TAB     &kp Q   &kp W       &kp E   &kp R   &kp T            &trans &trans &trans &trans             &kp Y     &kp U   &kp I   &kp O      &kp P    &kp EQUAL
+&kp LCTRL   &kp A   &kp S       &kp D   &kp F   &kp G            &trans &trans &trans &trans  &kp INS    &kp LBKT  &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C   &kp V   &kp B            &trans &trans &trans &trans  &kp GRAVE  &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&trans             &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+&MOD_CT_SH        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
             >;
         };
 
