@@ -277,7 +277,7 @@
 &kp TAB     &kp Q   &kp W       &kp E   &kp R   &kp T            &trans &trans &trans &trans             &kp Y     &kp U   &kp I   &kp O      &kp P    &kp EQUAL
 &kp LCTRL   &kp A   &kp S       &kp D   &kp F   &kp G            &trans &trans &trans &trans  &kp INS    &kp LBKT  &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C   &kp V   &kp B            &trans &trans &trans &trans  &kp GRAVE  &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&MOD_CT_SH        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
             >;
         };
 
