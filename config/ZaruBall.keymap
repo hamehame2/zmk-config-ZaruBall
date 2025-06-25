@@ -228,10 +228,10 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5                   &trans &trans &trans &trans                    &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 MINUS
-&to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R       &to_layer_0 T                    &trans &trans &trans &trans                    &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O       &to_layer_0 P             &to_layer_0 EQUAL
-&to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 SINGLE_QUOTE  &to_layer_0 SEMICOLON
-&to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4        &mkp MB5        &to_layer_0 PERIOD  &to_layer_0 SLASH         &lt SCROLL BACKSLASH
+&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2      &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5                  &trans &trans &trans &trans                    &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 INT_YEN
+&to_layer_0 TAB     &to_layer_0 SQT  &to_layer_0 COMMA  &to_layer_0 DOT   &to_layer_0 P       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F   &to_layer_0 G   &to_layer_0 C   &to_layer_0 R       &to_layer_0 L             &to_layer_0 SLASH
+&BL_mod LCTRL       &to_layer_0 A    &mkp RCLK         &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 S             &to_layer_0 MINUS
+&to_layer_0 LSHIFT  &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4        &mkp MB5        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
 &trans              &trans          &trans          &lt MUHEN BSPC  &trans              &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
             >;
         };
@@ -294,7 +294,7 @@
 &kp TAB     &kp HOME       &kp F17        &kp UP        &kp LS(RIGHT)   &kp END                 &trans &trans &trans &trans             &kp LALT       &kp LC(U)        &kp TAB        &kp LC(O)      &kp LC(P)       &kp PG_DN
 &kp LCTRL   &kp LC(BSPC)   &kp LEFT       &kp DOWN      &kp RIGHT       &kp DEL &kp LOCKING_NUM &trans &trans &trans &trans  &kp LC(F8) &kp BSPC       &kp ESC          &kp LC(Z)      &kp LC(S)      &kp LC(F)       &mkp RCLK 
 &kp LSHFT   &kp LC(D)      &kp LC(X)      &kp  LC(C)    &kp LC(V)       &kp F16 &kp GRAVE       &trans &trans &trans &trans  &kp RBKT  &kp LC(LA(TAB)) &kp LC(LS(TAB))  &kp LC(Y)      &kp LC(TAB)    &kp LG(TAB)     &kp LG(D)
-&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &p LC(W)
             >;
         };
 
@@ -306,7 +306,7 @@
 &kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)              &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
 &kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp LOCKING_NUM  &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &mkp LC(END) 
 &kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp GRAVE       &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
-&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &trans
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &td1
             >;
         };
 
