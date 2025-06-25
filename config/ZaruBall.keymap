@@ -294,7 +294,7 @@
 &kp TAB     &kp HOME       &kp F17        &kp UP        &kp LS(RIGHT)   &kp END                 &trans &trans &trans &trans             &kp LALT       &kp LC(U)        &kp TAB        &kp LC(O)      &kp LC(P)       &kp PG_DN
 &kp LCTRL   &kp LC(BSPC)   &kp LEFT       &kp DOWN      &kp RIGHT       &kp DEL &kp LOCKING_NUM &trans &trans &trans &trans  &kp LC(F8) &kp BSPC       &kp ESC          &kp LC(Z)      &kp LC(S)      &kp LC(F)       &mkp RCLK 
 &kp LSHFT   &kp LC(D)      &kp LC(X)      &kp  LC(C)    &kp LC(V)       &kp F16 &kp GRAVE       &trans &trans &trans &trans  &kp RBKT  &kp LC(LA(TAB)) &kp LC(LS(TAB))  &kp LC(Y)      &kp LC(TAB)    &kp LG(TAB)     &kp LG(D)
-&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &p LC(W)
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &kp LC(W)
             >;
         };
 
