@@ -71,7 +71,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&ht_BASE &BL_mod LCTRL &kp LANG1>, <&mo RAISE>, <&mo MOUSE>;
+            bindings = <&BL_mod LCTRL>, <&mo RAISE>, <&mo MOUSE>;
         };
 
         td2: tap_dance_2 {
