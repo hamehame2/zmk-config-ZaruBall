@@ -204,7 +204,7 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC          &kp N1   &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp NU6  &kp N7  &kp N8 &kp N9 &kp N0 &kp INT_YEN
+&kp ESC          &kp N1   &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp N6  &kp N7  &kp N8 &kp N9 &kp N0 &kp INT_YEN
 &kp TAB          &kp SQT  &kp COMMA   &kp DOT       &kp P      &kp J                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp F    &kp G   &kp C  &kp R  &kp L  &kp SLASH
 &BL_mod LCTRL    &kp A    &kp O       &kp E         &kp U      &kp I               &td2               &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp EQUAL  &kp D   &kp H   &kp T  &kp N  &kp S  &kp MINUS
 &mt LSHFT PSCRN &kp SEMI &kp Q       &kp Y         &kp K      &kp X               &kp INT1         &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp B      &kp M   &kp W  &kp V  &kp Z  &lt SCROLL BACKSLASH
