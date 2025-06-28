@@ -244,7 +244,7 @@
 &trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10               &trans &trans &trans &trans            &kp LA(F1)   &kp KP_N4  &kp KP_N5 &kp KP_N6     &kp KP_MULTIPLY &none
 &trans  &kp F11  &kp F12    &kp UP    &none      &kp HOME  &kp PG_UP   &trans &trans &trans &trans   &kp LPAR &kp C_VOL_UP &kp KP_N1  &kp KP_N2 &kp KP_N3     &kp KP_MINUS    &none
 &trans  &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN   &trans &trans &trans &trans   &kp RPAR &kp C_VOL_DN &kp KP_DOT &kp KP_N0 &kp LS(MINUS) &kp KP_PLUS     &none
-&trans           &kp RSHFT  &trans    &trans     &trans    &trans                                    &trans   &kp DEL                                                        &studio_unlock
+&trans           &kp RSHFT  &trans    &trans     &trans    &trans                                    &trans   &SandS LSHFT SPACE                                              &studio_unlock
             >;
         };
 
@@ -256,7 +256,7 @@
 &trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)     &kp LS(N0)   &none
 &trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT    &trans &trans &trans &trans   &kp PG_UP  &kp HOME  &none     &kp UP    &none     &none   &none
 &trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT &none   &none
-&trans         &none  &trans     &trans     &trans          &trans                                          &trans     &kp DEL                                         &trans
+&trans         &none  &trans     &trans     &trans          &trans                                          &trans     &trans                                         &trans
             >;
         };
 
@@ -266,9 +266,9 @@
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4           &trans &trans &trans &trans            &bt BT_CLR_ALL  &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none                  &trans &trans &trans &trans            &bt BT_CLR      &none  &none  &none  &none  &none
-&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &none    &trans &trans &trans &trans   &ind_bat &out OUT_TOG    &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)     &kp LS(N0) 
-&trans  &none         &none         &none         &none         &none         &none    &trans &trans &trans &trans   &ind_con &studio_unlock  &none  &none  &none  &none  &none
-&trans                &kp C_MUTE    &trans        &trans        &trans        &trans                                 &trans   &kp DEL                                     &trans
+&trans  &kp     N1  &kp N2      &kp N3          &kp N4          &kp N5        &kp N0   &trans &trans &trans &trans   &ind_bat &out OUT_TOG    &kp N6         &kp N7         &kp N8         &kp N9      &kp N0 
+&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &none    &trans &trans &trans &trans   &ind_con &studio_unlock  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)  &none
+&trans                &kp C_MUTE    &trans        &trans        &trans        &trans                                 &trans   &trans                                     &trans
             >;
         };
 
@@ -293,7 +293,7 @@
 &kp ESC     &kp LC(EXCL) &kp LC(AT) &kp LC(HASH)    &kp LC(DLLR)       &kp LC(PRCNT)            &trans &trans &trans &trans             &kp LC(CARET)  &kp LC(AMPS)   &kp LC(ASTRK) &kp LC(LPAR) &kp LC(RPAR) &kp F12
 &kp TAB     &kp HOME       &kp F17        &kp UP        &kp LS(RIGHT)   &kp END                 &trans &trans &trans &trans             &kp LALT       &kp LC(U)        &kp TAB        &kp LC(O)      &kp LC(P)       &kp PG_DN
 &kp LCTRL   &kp LC(BSPC)   &kp LEFT       &kp DOWN      &kp RIGHT       &kp DEL &kp KP_NUM      &trans &trans &trans &trans  &kp LC(F8) &kp BSPC       &kp ESC          &kp LC(Z)      &kp LC(S)      &kp LC(F)       &mkp RCLK 
-&kp LSHFT   &kp LC(D)      &kp LC(X)      &kp  LC(C)    &kp LC(V)       &kp F16 &kp GRAVE       &trans &trans &trans &trans  &kp RBKT  &kp LC(LA(TAB)) &kp LC(LS(TAB))  &kp LC(Y)      &kp LC(TAB)    &kp LG(TAB)     &kp LG(D)
+&kp LSHFT   &kp LC(D)      &kp LC(X)      &kp  LC(C)    &kp LC(V)       &kp F16 &kp F12         &trans &trans &trans &trans  &kp RBKT  &kp LC(LA(TAB)) &kp LC(LS(TAB))  &kp LC(Y)      &kp LC(TAB)    &kp LG(TAB)     &kp LG(D)
 &trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &kp LC(W)
             >;
         };
@@ -305,7 +305,7 @@
 &kp ESC     &kp LC(F1)   &kp LC(F2)   &kp LC(F3)   &kp LC(F4)     &kp LC(F5)           &trans &trans &trans &trans                    &kp LC(F6)       &kp LC(F7)       &kp LC(F8)       &kp LC(F9)        &kp LC(F10)   &kp LC(F11)
 &kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)          &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
 &kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp KP_NUM   &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &mkp LC(END) 
-&kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp GRAVE   &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
+&kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp LC(F12) &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
 &trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &td1
             >;
         };
