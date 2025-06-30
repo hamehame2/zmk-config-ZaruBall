@@ -189,7 +189,7 @@
 
         combo_ng_off {
             timeout-ms = <300>;
-            key-positions = <36 52>;
+            key-positions = <34 36>;
             bindings = <&ng_off>;
             layers = <0 1>;
         };
