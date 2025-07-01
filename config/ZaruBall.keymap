@@ -207,8 +207,8 @@
 &kp ESC          &kp N1   &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp N6  &kp N7  &kp N8 &kp N9 &kp N0 &kp INT_YEN
 &kp TAB          &kp SQT  &kp COMMA   &kp DOT       &kp P      &kp J                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp F    &kp G   &kp C  &kp R  &kp L  &kp SLASH
 &BL_mod LCTRL    &kp A    &kp O       &kp E         &kp U      &kp I               &td2               &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp EQUAL  &kp D   &kp H   &kp T  &kp N  &kp S  &kp MINUS
-&mt LSHFT PSCRN &kp SEMI &kp Q       &kp Y         &kp K      &kp X               &kp INT1         &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp B      &kp M   &kp W  &kp V  &kp Z  &lt SCROLL BACKSLASH
-&td0       &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &SandS LSHFT SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET  &lt HENKA SPACE                                            &td1
+&mt LSHFT PSCRN &kp SEMI &kp Q       &kp Y         &kp K      &kp X               &mt KP_NUM INT1    &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp B      &kp M   &kp W  &kp V  &kp Z  &lt SCROLL BACKSLASH
+&td0       &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &SandS LSHFT SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
 
@@ -219,8 +219,8 @@
 &trans    &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
 &trans    &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
 &trans    &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp LS(EQUAL)
-&trans    &ng Z   &ng X       &ng C         &ng V        &ng B      &kp INT1         &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&trans            &trans      &BL_mod LWIN  &trans      &ng SPACE   &trans                                        &lt HENKA RET   &ng SPACE                                           &trans
+&trans    &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
+&trans            &trans      &BL_mod LWIN  &trans      &ng SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
         };
 
@@ -252,11 +252,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&kp ESC    &none  &none  &none      &none      &none                             &trans &trans &trans &trans              &none      &none         &none      &none         &none   &none
-&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6) &kp LS(N7)    &kp LS(N8) &kp LS(N9)    &kp LS(N0)  &none
-&kp LCTRL  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT    &trans &trans &trans &trans   &kp PG_UP  &kp HOME   &kp LC(PG_UP) &kp UP     &kp LC(PG_DN) &none   &none
-&kp LSHIFT &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END    &kp LEFT      &kp DOWN   &kp RIGHT     &none   &none
-&trans         &none  &trans     &trans     &trans          &trans                                          &trans     &trans                                         &trans
+&kp ESC     &kp LC(F1)   &kp LC(F2)   &kp LC(F3)   &kp LC(F4)     &kp LC(F5)           &trans &trans &trans &trans                    &kp LC(F6)       &kp LC(F7)       &kp LC(F8)       &kp LC(F9)        &kp LC(F10)   &kp LC(F11)
+&kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)          &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
+&kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp KP_NUM   &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &kp LC(END) 
+&kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp LC(F12) &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &td1
             >;
         };
 
@@ -302,11 +302,11 @@
             display-name = "HENKA";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC     &kp LC(F1)   &kp LC(F2)   &kp LC(F3)   &kp LC(F4)     &kp LC(F5)           &trans &trans &trans &trans                    &kp LC(F6)       &kp LC(F7)       &kp LC(F8)       &kp LC(F9)        &kp LC(F10)   &kp LC(F11)
-&kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)          &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
-&kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp KP_NUM   &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &kp LC(END) 
-&kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp LC(F12) &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
-&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &td1
+&kp ESC    &none  &none  &none      &none      &none                             &trans &trans &trans &trans              &none      &none         &none      &none         &none   &none
+&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6) &kp LS(N7)    &kp LS(N8) &kp LS(N9)    &kp LS(N0)  &none
+&kp LCTRL  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT    &trans &trans &trans &trans   &kp PG_UP  &kp HOME   &kp LC(PG_UP) &kp UP     &kp LC(PG_DN) &none   &none
+&kp LSHIFT &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END    &kp LEFT      &kp DOWN   &kp RIGHT     &none   &none
+&trans         &none  &trans     &trans     &trans          &trans                                          &trans     &trans                                         &trans
             >;
         };
 
