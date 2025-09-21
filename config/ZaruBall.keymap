@@ -168,13 +168,15 @@
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LANG1 &to NAGINATA>;
+            //bindings = <&macro_tap &kp LANG1 &to NAGINATA>;
+            bindings = <&macro_tap &kp CAPS &to NAGINATA>;
         };
     
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LANG2 &to BASE>;
+            //bindings = <&macro_tap &kp LANG2 &to BASE>;
+            bindings = <&macro_tap &kp CAPS &to BASE>;
         };
     };
 
@@ -218,7 +220,7 @@
             bindings = <
 &trans    &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
 &trans    &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
-&trans    &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
+&trans    &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp LC(I) 
 &trans    &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
 &trans            &trans      &BL_mod LWIN  &trans      &ng SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
