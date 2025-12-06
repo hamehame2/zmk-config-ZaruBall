@@ -169,12 +169,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LANG1 &to NAGINATA>;
+            //bindings = <&macro_tap &kp CAPS &to NAGINATA>;
         };
     
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LANG2 &to BASE>;
+            //bindings = <&macro_tap &kp CAPS &to BASE>;
         };
     };
 
@@ -204,11 +206,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC          &kp N1   &kp N2      &kp N3        &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp N6  &kp N7  &kp N8 &kp N9 &kp N0 &kp INT_YEN
-&kp TAB          &kp COMMA &kp DOT   &kp U       &kp C      &kp V                                 &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_MULTIPLY             &kp Q    &kp F   &kp D  &kp L  &kp Y  &kp SLASH
-&BL_mod LCTRL    &kp A    &kp O       &kp E         &kp S      &kp G               &td2               &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_MINUS     &kp EQUAL  &kp B   &kp N   &kp T  &kp R  &kp I  &kp MINUS
-&mt LSHFT PSCRN &kp SEMI &kp X       &kp SQT          &kp W      &kp Z               &mt KP_NUM INT1    &kp KP_ENTER &kp KP_N0 &kp KP_DOT &kp KP_PLUS      &kp RBKT   &kp P      &kp H   &kp M  &kp K  &kp J  &lt SCROLL BACKSLASH
-&td0       &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &SandS LSHFT SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
+&kp ESC         &kp N1      &kp N2  &kp N3    &kp N4     &kp N5                              &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                 &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q       &kp W   &kp E     &kp R      &kp T                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL CAPS  &kp A       &kp S   &kp D     &kp F      &kp G               &td2            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT PSCRN &kp Z       &kp X   &kp C     &kp V      &kp B               &mt KP_NUM INT1 &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
+&td0            &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &kp SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
 
@@ -216,11 +218,11 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&trans    &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
-&trans    &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
-&trans    &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp LS(EQUAL)
-&trans    &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&trans            &trans      &BL_mod LWIN  &trans      &ng SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
+&kp CAPS      &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
+&trans        &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
+&mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
+&trans        &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
+&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
         };
 
@@ -232,7 +234,7 @@
 &to_layer_0 TAB     &to_layer_0 SQT  &to_layer_0 COMMA  &to_layer_0 DOT   &to_layer_0 P       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F   &to_layer_0 G   &to_layer_0 C   &to_layer_0 R       &to_layer_0 L             &to_layer_0 SLASH
 &kp LCTRL           &to_layer_0 A    &mkp RCLK         &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 S             &to_layer_0 MINUS
 &kp LSHIFT          &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB5        &mkp MB4        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
-&trans              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
+&td0              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
             >;
         };
 
