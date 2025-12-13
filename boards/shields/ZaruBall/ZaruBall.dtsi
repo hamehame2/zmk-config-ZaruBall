@@ -202,10 +202,13 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        //cpi = <600>; 20251210z4.1update
+        res-cpi = <600>;
+        // evt-type = <INPUT_EV_REL>; 20251210z4.1update
+        //x-input-code = <INPUT_REL_X>; 20251210z4.1update
+        //y-input-code = <INPUT_REL_Y>; 20251210z4.1update
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
 
         force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
