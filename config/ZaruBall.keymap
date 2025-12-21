@@ -25,6 +25,16 @@
 #define MUHEN   7
 #define HENKA   8
 
+/ {
+  behaviors {
+    mj: mejiro {
+      compatible = "zmk,behavior-mejiro";
+      #binding-cells = <0>;
+    };
+  };
+};
+
+
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
