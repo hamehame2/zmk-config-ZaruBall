@@ -11,8 +11,8 @@ manifest:
       url-base: https://github.com/eswai
     - name: ImSota
       url-base: https://github.com/ImSota
-    #- name: hamehame2
-    #  url-base: https://github.com/hamehame2
+    - name: hamehame2
+      url-base: https://github.com/hamehame2
     # - name: zettaface
     #   url-base: https://github.com/zettaface
     #- name: prospector
@@ -27,6 +27,9 @@ manifest:
     #  revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
+      revision: main
+    - name: zmk-naginata # ここを追加
+      remote: hamehame2
       revision: main
     #- name: zmk-Mejiro # ここを追加
     #  remote: hamehame2
