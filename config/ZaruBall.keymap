@@ -11,8 +11,8 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-#include <behaviors/mejiro.dtsi>
-#include <dt-bindings/zmk/mejiro.h>
+//#include <behaviors/mejiro.dtsi>
+//#include <dt-bindings/zmk/mejiro.h>
 
 #define BASE     0
 #define NAGINATA 1
@@ -29,9 +29,6 @@
 
 
 // スクロール量の設定
-#ifdef ZMK_POINTING_DEFAULT_SCRL_VAL
-#undef ZMK_POINTING_DEFAULT_SCRL_VAL
-#endif
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &trackball_listener {
@@ -200,7 +197,7 @@
         compatible = "zmk,combos";
         combo_ng_on {
             timeout-ms = <300>;
-            key-positions = <45 47>; // 45 65 6 7
+            key-positions = <45 65>; // 45 65 6 7
             bindings = <&ng_on>;
             layers = <0 1 6>;
         };
@@ -230,11 +227,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC         &kp N1      &kp N2  &kp N3    &kp N4     &kp N5                              &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                 &kp N6        &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp ESC         &kp N1      &kp N2  &kp N3    &kp N4     &kp N5                              &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                 &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
 &kp TAB         &kp Q       &kp W   &kp E     &kp R      &kp T                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL CAPS  &kp A       &kp S   &kp D     &kp F      &kp G               &td2            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS                  &kp LBKT      &kp H   &kp J      &kp K    &kp L     &kp SEMI  &kp SQT
-&kp A           &kp Z       &kp X   &kp C     &kp V &kp B                           &kp B     &kp B         &kp A      &kp B       &kp C                       &kp RBKT       &kp N   &kp M      &kp COMMA &kp DOT  &kp FSLH  &kp SQT
-&kp LCTRL        &kp C_MUTE  &kp LWIN  &lt 7 BSPC &kp SPACE  &lt 3 PSCRN                                                               &lt 4 RET   &kp SPACE                                           &kp LCTRL
+&mt LCTRL CAPS  &kp A       &kp S   &kp D     &kp F      &kp G               &td2            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT PSCRN &kp Z       &kp X   &kp C     &kp V      &kp B               &mt KP_NUM INT1 &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
+&td0            &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &kp SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
 
@@ -242,11 +239,11 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp CAPS      &mj lX  &mj lT      &mj lY        &mj lI       &mj lU                       &trans &trans &trans &trans               &mj rU  &mj rI      &mj rY        &mj rT       &mj rX &mj rS
-&trans        &mj lS   &mj lK       &mj lN         &mj lA        &mj lU                        &trans &trans &trans &trans              &mj rU  &mj rA      &mj rN        &mj rK       &mj rS &mj rX
-&mt LCTRL ESC &mj lX   &mj rX       &kp KP_NUM          &mj ln        &mj ln      &mj ln       &trans &trans &trans &trans  &mj rn &mj rn   &mj rn   &mj rn      &ng L    &mj rX   &mj rS 
-&trans        &kp Z   &kp X       &mt KP_NUM INT1         &mj lk        &mj lt      &mj lk  &trans &trans &trans &trans  &trans        &mj rk   &mj rt   &mj rk  &kp DOT  &kp SLASH  &trans
-&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &mj lt   &trans                                        &lt RAISE RET   &mj rt                                           &trans
+&kp CAPS      &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
+&trans        &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
+&mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
+&trans        &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
+&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
         };
 
@@ -257,8 +254,8 @@
 &to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2      &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5                  &trans &trans &trans &trans                    &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 INT_YEN
 &to_layer_0 TAB     &to_layer_0 SQT  &to_layer_0 COMMA  &to_layer_0 DOT   &to_layer_0 P       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F   &to_layer_0 G   &to_layer_0 C   &to_layer_0 R       &to_layer_0 L             &to_layer_0 SLASH
 &kp LCTRL           &to_layer_0 A    &mkp RCLK         &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 S             &to_layer_0 MINUS
-&kp LSHFT          &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB5        &mkp MB4        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
-&td0              &trans          &kp LWIN       &lt MUHEN BSPC  &kp SPACE      &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
+&kp LSHIFT          &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB5        &mkp MB4        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
+&td0              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
             >;
         };
 
@@ -269,8 +266,8 @@
 &kp ESC       &kp F1   &kp F2     &kp F3    &kp F4     &kp F5                &trans &trans &trans &trans                &kp LA(F2)    &kp N0  &kp N0 &kp N0 &kp KP_SLASH    &kp KP_NUMLOCK
 &kp TAB       &kp F6   &kp F7     &kp F8    &kp F9     &kp F10               &trans &trans &trans &trans                &kp LS(MINUS) &kp N7  &kp N8 &kp N9 &kp KP_MULTIPLY &kp LS(MINUS)
 &kp LCTRL     &kp F11  &kp F12    &kp UP    &kp LC(F8) &kp HOME  &kp PG_UP   &trans &trans &trans &trans   &kp C_VOL_UP &kp N0        &kp N4  &kp N5 &kp N6 &kp KP_MINUS    &kp LS(MINUS)
-&kp LSHFT    &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN   &trans &trans &trans &trans   &kp C_VOL_DN &kp KP_DOT    &kp N1  &kp N2 &kp N3  &kp KP_PLUS    &none
-&trans           &kp SPACE  &BL_mod LWIN    &trans     &trans    &trans                                    &lt RAISE RET    &mt LSHFT RET                                             &studio_unlock
+&kp LSHIFT    &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN   &trans &trans &trans &trans   &kp C_VOL_DN &kp KP_DOT    &kp N1  &kp N2 &kp N3  &kp KP_PLUS    &none
+&trans           &kp RSHFT  &BL_mod LWIN    &trans     &trans    &trans                                    &lt RAISE RET    &mt LSHFT RET                                             &studio_unlock
             >;
         };
 
@@ -282,7 +279,7 @@
 &kp TAB     &kp LC(HOME) &kp PG_UP    &kp LC(UP)   &kp PG_DN      &kp LC(END)          &trans &trans &trans &trans                    &kp LC(LS(HOME)) &kp LC(PG_UP)    &kp LC(LS(UP))   &kp LC(PG_DN)     &kp LC(SPACE) &kp LC(LS(DEL))
 &kp LCTRL   &kp HOME     &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp END &kp KP_NUM   &trans &trans &trans &trans  &kp LC(F8)        &kp SPACE        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(RIGHT)) &kp LS(SPACE) &kp LC(END) 
 &kp LSHFT   &kp LC(F8)   &kp F2       &kp F3       &kp F4         &kp F5   &kp LC(F12) &trans &trans &trans &trans  &kp LG(LS(PSCRN)) &kp F6           &kp F7           &kp F8           &kp F9            &kp F10       &kp F11
-&trans        &kp C_MUTE  &trans  &trans  &kp SPACE                               &trans     &trans    &trans                              &td1
+&trans        &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE                               &trans     &trans    &trans                              &td1
             >;
         };
 
@@ -293,7 +290,7 @@
 &kp ESC    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4           &trans &trans &trans &trans            &bt BT_CLR_ALL  &none  &none  &none  &none  &none
 &kp TAB    &none         &none         &none         &none         &none                  &trans &trans &trans &trans            &bt BT_CLR      &none  &none  &none  &none  &none
 &kp LCTRL  &kp     N1  &kp N2      &kp N3          &kp N4          &kp N5        &kp N0   &trans &trans &trans &trans   &ind_bat &out OUT_TOG    &kp N6         &kp N7         &kp N8         &kp N9      &kp N0 
-&kp LSHFT &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &none    &trans &trans &trans &trans   &ind_con &studio_unlock  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)  &none
+&kp LSHIFT &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &none    &trans &trans &trans &trans   &ind_con &studio_unlock  &kp LS(N6)     &kp LS(N7)     &kp LS(N8)     &kp LS(N9)  &none
 &trans                &kp C_MUTE    &trans        &trans        &trans        &trans                                 &trans   &trans                                     &trans
             >;
         };
@@ -331,7 +328,7 @@
 &kp ESC    &none  &none  &none      &none      &none                             &trans &trans &trans &trans              &none      &none         &none      &none         &none   &none
 &kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6) &kp LS(N7)    &kp LS(N8) &kp LS(N9)    &kp LS(N0)  &none
 &kp LCTRL  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT    &trans &trans &trans &trans   &kp PG_UP  &kp HOME   &kp LC(PG_UP) &kp UP     &kp LC(PG_DN) &none   &none
-&kp LSHFT &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END    &kp LEFT      &kp DOWN   &kp RIGHT     &none   &none
+&kp LSHIFT &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END    &kp LEFT      &kp DOWN   &kp RIGHT     &none   &none
 &trans         &none  &trans     &trans     &trans          &trans                                          &trans     &trans                                         &trans
             >;
         };
