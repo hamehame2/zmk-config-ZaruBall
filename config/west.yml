@@ -31,6 +31,9 @@ manifest:
     - name: zmk-naginata # ここを追加
       remote: hamehame2
       revision: main
+    - name: zmk-behavior-mejiro # ここを追加
+      remote: hamehame2
+      revision: main     
     #- name: zmk-Mejiro # ここを追加
     #  remote: hamehame2
     #  revision: main
