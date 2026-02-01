@@ -239,11 +239,11 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp CAPS      &trans  &trans      &trans        &trans       &trans                       &trans &trans &trans &trans               &trans  &trans  &trans     &trans   &trans     &trans
-&trans        &ng Q   &ng W       &ng E         &ng R        &ng T                        &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
-&mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
-&trans        &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
+&kp CAPS      &mj lX  &mj lT      &mj lY        &mj lI       &mj lU                       &trans &trans &trans &trans               &mj rU  &mj rI      &mj rY        &mj rT       &mj rX &mj rS
+&trans        &mj lS   &mj lK       &mj lN         &mj lA        &mj lU                        &trans &trans &trans &trans              &mj rU  &mj rA      &mj rN        &mj rK       &mj rS &mj rX
+&mt LCTRL ESC &mj lX   &mj rX       &kp KP_NUM          &mj ln        &mj ln      &mj ln       &trans &trans &trans &trans  &mj rn &mj rn   &mj rn   &mj rn      &ng L    &mj rX   &mj rS 
+&trans        &kp Z   &kp X       &mt KP_NUM INT1         &mj lk        &mj lt      &mj lk  &trans &trans &trans &trans  &trans        &mj rk   &mj rt   &mj rk  &kp DOT  &kp SLASH  &trans
+&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &mj lt   &trans                                        &lt RAISE RET   &mj rt                                           &trans
             >;
         };
 
