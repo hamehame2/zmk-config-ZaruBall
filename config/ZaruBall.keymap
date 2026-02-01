@@ -11,8 +11,8 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-//#include <behaviors/mejiro.dtsi>
-//#include <dt-bindings/zmk/mejiro.h>
+#include <behaviors/mejiro.dtsi>
+#include <dt-bindings/zmk/mejiro.h>
 
 #define BASE     0
 #define NAGINATA 1
@@ -197,7 +197,7 @@
         compatible = "zmk,combos";
         combo_ng_on {
             timeout-ms = <300>;
-            key-positions = <45 65>; // 45 65 6 7
+            key-positions = <45 47>; // 45 65 6 7
             bindings = <&ng_on>;
             layers = <0 1 6>;
         };
