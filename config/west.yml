@@ -1,4 +1,4 @@
-#defaultの設定s
+#defaultの設定
 manifest:
   remotes:
     - name: zmkfirmware
