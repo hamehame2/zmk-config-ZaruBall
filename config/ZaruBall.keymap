@@ -110,6 +110,14 @@
 
             display-name = "ht-BL_mod";
         };
+
+
+        mejiro: mejiro {
+          compatible = "zmk,behavior-mejiro";
+          #binding-cells = <1>;
+        };
+
+
     };
 };
 
@@ -218,6 +226,7 @@
 
 };
 };
+
 
 / {
     keymap {
