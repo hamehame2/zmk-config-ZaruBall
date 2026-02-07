@@ -30,7 +30,7 @@ manifest:
       revision: main
     - name: zmk-behavior-mejiro # ここを追加
       remote: hamehame2
-      revision: fixed6
+      revision: fixed7
     #- name: zmk-Mejiro # ここを追加
     #  remote: hamehame2
     #  revision: main
