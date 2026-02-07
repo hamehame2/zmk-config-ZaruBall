@@ -11,17 +11,7 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-// #include <behaviors/mejiro.dtsi>  // embedded below (no external module needed)
-
-/ {
-  behaviors {
-    mg: mg {
-      compatible = "zmk,behavior-mejiro";
-      #binding-cells = <1>;
-    };
-  };
-};
-
+#include <behaviors/mejiro.dtsi>
 #include <dt-bindings/zmk/mejiro.h>
 
 #define BASE     0
