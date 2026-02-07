@@ -248,10 +248,10 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC         &kp N1      &kp N2  &kp N3    &kp N4     &kp N5                              &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                 &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q       &kp W   &kp E     &kp R      &kp T                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL CAPS  &kp A       &kp S   &kp D     &kp F      &kp G               &td2            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&mt LSHFT PSCRN &kp Z       &kp X   &kp C     &kp V      &kp B               &mt KP_NUM INT1 &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
+&kp ESC         &mg fX       &mg fT   &mg fY     &mg fI      &mg fU                            &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                &mg fU       &mg fI   &mg fY     &mg fT      &mg fX   &kp MINUS
+&kp TAB         &mg fS       &mg fK   &mg fN     &mg fA      &mg fU                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY           &mg fU       &mg fA   &mg fN     &mg fK      &mg fS      &kp EQUAL
+&mt LCTRL CAPS  &mg fX     &mg fK  &mg fN  &lt MUHEN BSPC    &mg fn               &mg fn          &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &mg Sh     &mg fn       &mg fn   &mg fN     &mg fK      &mg fX   &kp SQT
+&mt LSHFT PSCRN &kp Z       &kp X   &kp C  &lt LOWER PSCR    &mg ft            &mg fk    &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &mg fk       &mg ft            &mg fk   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
 &td0            &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &kp SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
