@@ -250,8 +250,8 @@
             bindings = <
 &kp ESC         &mj fX       &mj fT   &mj fY     &mj fI      &mj fU                               &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                &mj jU     &mj jI  &mj jY    &mj jT     &mj jX   &mj jS
 &kp TAB        &mj fS       &mj fK   &mj fN     &mj fA      &mj fU                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &mj jU     &mj jA  &mj jN    &mj jK     &mj jS   &mj jX
-&mt LCTRL CAPS  &kp A       &kp S   &kp D     &kp F      &kp G               &td2            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp LBKT   &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&mt LSHFT PSCRN &kp Z       &kp X   &kp C     &kp V      &kp B               &mt KP_NUM INT1 &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RBKT   &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
+&mt LCTRL CAPS  &mj fX      &kp S   &kp D     &kp F      &mj fn               &mj fn            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &mj fn   &mj fn        &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT PSCRN &kp Z       &kp X   &kp C     &kp V      &mj ft            &mj fk           &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS            &mj fk   &mj ft        &kp M   &kp COMMA  &kp DOT  &kp FSLH  &lt SCROLL BACKSLASH
 &td0            &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &kp SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
