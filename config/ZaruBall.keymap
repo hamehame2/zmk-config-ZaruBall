@@ -111,20 +111,20 @@
             display-name = "ht-BL_mod";
         };
 
-
-/* mejiro behavior: module側の /behaviors/mejiro に #binding-cells が無いので補修 */
-        &{/behaviors/mejiro} {
-          #binding-cells = <1>;
-        };
-
-/* もし /behaviors/mj が存在する構成でも安全にしておく（あっても害なし） */
-        &{/behaviors/mj} {
-          #binding-cells = <1>;
-        };
-
-
     };
 };
+
+
+/* mejiro behavior: module側の /behaviors/mejiro に #binding-cells が無いので補修 */
+&{/behaviors/mejiro} {
+  #binding-cells = <1>;
+};
+
+/* もし /behaviors/mj が存在する構成でも安全にしておく（あっても害なし） */
+&{/behaviors/mj} {
+  #binding-cells = <1>;
+};
+
 
 &sl { release-after-ms = <250>; }; // time needed for double click (for mkp_exit_AML)
 / {
