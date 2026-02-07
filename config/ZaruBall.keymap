@@ -115,15 +115,15 @@
 };
 
 
-/* mejiro behavior: module側の /behaviors/mejiro に #binding-cells が無いので補修 */
-&{/behaviors/mejiro} {
-  #binding-cells = <1>;
-};
+//* mejiro behavior: module側の /behaviors/mejiro に #binding-cells が無いので補修 */
+//&{/behaviors/mejiro} {
+//  #binding-cells = <1>;
+//};
 
-/* もし /behaviors/mj が存在する構成でも安全にしておく（あっても害なし） */
-&{/behaviors/mj} {
-  #binding-cells = <1>;
-};
+///* もし /behaviors/mj が存在する構成でも安全にしておく（あっても害なし） */
+//&{/behaviors/mj} {
+//  #binding-cells = <1>;
+//};
 
 
 &sl { release-after-ms = <250>; }; // time needed for double click (for mkp_exit_AML)
@@ -253,10 +253,10 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC         &mj fX       &mj fT   &mj fY     &mj fI      &mj fU                               &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                &mj jU     &mj jI  &mj jY    &mj jT     &mj jX   &mj jS
-&kp TAB        &mj fS       &mj fK   &mj fN     &mj fA      &mj fU                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &mj jU     &mj jA  &mj jN    &mj jK     &mj jS   &mj jX
-&mt LCTRL CAPS  &mj fX      &mj fK   &mj fN     &mj fA      &mj fn               &mj fn            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &mj fn   &mj fn     &mj jA  &mj jN    &mj jK     &mj jS   &mj jX
-&mt LSHFT PSCRN &mj fX      &mj fK   &mj fN     &mj fA      &mj ft            &mj fk           &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS            &mj fk   &mj ft     &mj jA  &mj jN    &mj jK     &mj jS   &mj jX
+&kp ESC         &mg fX       &mg fT   &mg fY     &mg fI      &mg fU                               &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                &mg jU     &mg jI  &mg jY    &mg jT     &mg jX   &mg jS
+&kp TAB        &mg fS       &mg fK   &mg fN     &mg fA      &mg fU                               &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY               &mg jU     &mg jA  &mg jN    &mg jK     &mg jS   &mg jX
+&mt LCTRL CAPS  &mg fX      &mg fK   &mg fN     &mg fA      &mg fn               &mg fn            &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &mg fn   &mg fn     &mg jA  &mg jN    &mg jK     &mg jS   &mg jX
+&mt LSHFT PSCRN &mg fX      &mg fK   &mg fN     &mg fA      &mg ft            &mg fk           &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS            &mg fk   &mg ft     &mg jA  &mg jN    &mg jK     &mg jS   &mg jX
 &td0            &kp C_MUTE  &BL_mod LWIN  &lt MUHEN BSPC &kp SPACE  &lt LOWER PSCRN                                                               &lt RAISE RET   &SandS LSHFT SPACE                                           &td1
             >;
         };
