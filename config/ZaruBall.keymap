@@ -112,10 +112,10 @@
         };
 
 
-        mejiro: mejiro {
-          compatible = "zmk,behavior-mejiro";
-          #binding-cells = <1>;
-        };
+//        mejiro: mejiro {
+//          compatible = "zmk,behavior-mejiro";
+//          #binding-cells = <1>;
+//        };
 
 
     };
