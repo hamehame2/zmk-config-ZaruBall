@@ -28,12 +28,12 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-    #- name: zmk-behavior-mejiro # ここを追加
-     # remote: hamehame2
-      #revision: main
-    - name: zmk-naginata # ここを追加
+    - name: zmk-behavior-mejiro # ここを追加
       remote: hamehame2
       revision: main
+    #- name: zmk-naginata # ここを追加
+     # remote: hamehame2
+      #revision: main
     # - name: zmk-input-processor-keybind
     #   remote: zettaface
     #   revision: main
