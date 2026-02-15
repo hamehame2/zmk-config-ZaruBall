@@ -13,16 +13,16 @@ manifest:
     #   url-base: https://github.com/zettaface
     # - name: prospector
     #   url-base: https://github.com/t-ogura
-    - name: hamehame2
-      url-base: https://github.com/hamehame2
+    #- name: hamehame2
+    #  url-base: https://github.com/hamehame2
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-behavior-mejiro # ここを追加
-      remote: hamehame2
-      revision: main
+    #- name: zmk-behavior-mejiro # ここを追加
+    #  remote: hamehame2
+    #  revision: main
     # - name: zmk-pmw3610-driver
     #   remote: badjeff
     #   revision: main
