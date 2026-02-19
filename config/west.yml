@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: hamehame2
+      url-base: https://github.com/hamehame2
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,5 +19,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
+    - name: zmk-naginata # ここを追加
+      remote: hamehame2
+      revision: main
   self:
     path: config
