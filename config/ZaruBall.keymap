@@ -255,7 +255,7 @@
             bindings = <
 &kp ESC      &ng Q   &ng W       &ng E         &ng R        &ng T                       &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P     &trans
 &trans        &ng A   &ng S       &ng D         &ng F        &ng G                        &trans &trans &trans &trans               &ng H   &ng J   &ng K      &ng L    &ng SEMI      &kp LS(INT1) 
-&mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &ng H   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
+&mt LCTRL ESC &kp A   &kp S       &kp D         &kp F        &kp G      &kp KP_NUM       &trans &trans &trans &trans  &kp LS(LBKT) &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT 
 &trans        &ng Z   &ng X       &ng C         &ng V        &ng B      &mt KP_NUM INT1  &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
 &BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
