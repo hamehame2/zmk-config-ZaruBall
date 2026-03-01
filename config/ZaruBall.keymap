@@ -253,10 +253,10 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC      &ng Q   &ng W       &ng E         &ng R        &ng T                       &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P     &trans
-&trans        &ng A   &ng S       &ng D         &ng F        &ng G                        &trans &trans &trans &trans               &ng H   &ng J   &ng K      &ng L    &ng SEMI      &kp LS(INT1) 
-&mt LCTRL ESC &kp A   &kp S       &kp D         &kp F       &ng C     &ng C       &trans &trans &trans &trans  &ng COMMA &ng COMMA   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT 
-&trans        &ng Z   &ng X       &ng C         &ng B        &ng V     &ng B   &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
+&kp ESC       &kp N1      &kp N2  &kp N3    &kp N4     &kp N5                      &trans &trans &trans &trans                       &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &trans
+&trans        &ng Q   &ng W       &ng E         &ng R        &ng T                         &trans &trans &trans &trans               &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
+&mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G       &trans   &trans &trans &trans &trans  &ng COMMA &ng COMMA   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
+&trans        &ng Z   &ng X       &ng C         &ng B        &ng V     &trans   &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
 &BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
             >;
         };
