@@ -11,8 +11,8 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-#include <behaviors/mejiro.dtsi>
-#include <dt-bindings/zmk/mejiro.h>
+//#include <behaviors/mejiro.dtsi>
+//#include <dt-bindings/zmk/mejiro.h>
 
 #define BASE     0
 #define NAGINATA 1
