@@ -19,8 +19,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
-    - name: zmk-naginata # ここを追加
-    #- name: zmk-behavior-mejiro # ここを追加
+    #- name: zmk-naginata # ここを追加
+    - name: zmk-behavior-mejiro # ここを追加
       remote: hamehame2
       revision: main
   self:
