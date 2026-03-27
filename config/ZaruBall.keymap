@@ -257,7 +257,7 @@
 &trans        &ng Q   &ng W       &ng E         &ng R        &ng T                         &trans &trans &trans &trans                          &ng Y   &ng U   &ng I      &ng O    &ng P      &kp LS(INT1) 
 &mt LCTRL ESC &ng A   &ng S       &ng D         &ng F        &ng G       &trans   &trans &trans &trans &trans            &ng COMMA &ng H   &ng J   &ng K      &ng L    &ng SEMI   &ng SQT 
 &trans        &ng Z   &ng X       &ng C         &ng V        &ng B     &trans   &trans &trans &trans &trans  &trans        &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &ng SPACE                                           &trans
+&BL_mod LCTRL &trans      &BL_mod LWIN  &trans      &kp SPACE   &trans                                        &lt RAISE RET   &kp SPACE                                           &trans
             >;
         };
 
