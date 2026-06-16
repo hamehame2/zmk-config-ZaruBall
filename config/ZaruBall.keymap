@@ -14,6 +14,8 @@
 //#include <behaviors/mejiro.dtsi>
 //#include <dt-bindings/zmk/mejiro.h>
 
+#include <mouse-gesture.dtsi>
+
 #define BASE     0
 #define NAGINATA 1
 #define MOUSE    2
@@ -23,7 +25,7 @@
 #define MOD      6
 #define SCROLL   3
 #define MUHEN   7
-#define HENKA   8
+#define GESTURE   8
 
 
 
@@ -33,7 +35,9 @@
 
 &trackball_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
-                        &zip_temp_layer MOUSE 500>;
+                        &zip_temp_layer MOUSE 500
+                        &zip_mouse_gesture>;
+
     scroller {
         layers = <SCROLL>;
         input-processors = <
@@ -41,6 +45,35 @@
                             &zip_xy_scaler 1 15
                             &zip_xy_to_scroll_mapper
                             >;
+    };
+};
+
+
+&zip_mouse_gesture {
+    stroke-size = <250>;
+    idle-timeout-ms = <150>;
+    gesture-cooldown-ms = <150>;
+    enable-eager-mode;
+    suppress-movement;
+
+    next {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp TAB>;
+    };
+
+    prev {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LS(TAB)>;
+    };
+
+    decide {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp ENTER>;
+    };
+
+    cancel {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp ESC>;
     };
 };
 
@@ -266,10 +299,10 @@
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2      &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5                  &trans &trans &trans &trans                    &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 INT_YEN
-&to_layer_0 TAB     &to_layer_0 SQT  &to_layer_0 COMMA  &to_layer_0 DOT   &to_layer_0 P       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F   &to_layer_0 G   &to_layer_0 C   &to_layer_0 R       &to_layer_0 L             &to_layer_0 SLASH
+&to_layer_0 TAB     &kp LWIN        &kp LALT           &kp LCTRL       &mouse_gesture       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F    &mouse_gesture   &kp LCTRL     &kp LALT            &kp LWIN                  &to_layer_0 SLASH
 &kp LCTRL           &to_layer_0 A    &mkp RCLK         &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 S             &to_layer_0 MINUS
 &kp LSHIFT          &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB5        &mkp MB4        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
-&td0              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt HENKA RET                                                               &trans
+&td0              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt GESTURE RET                                                               &trans
             >;
         };
 
@@ -335,12 +368,12 @@
             >;
         };
 
-        HENKA_layer {
-            display-name = "HENKA";
+        GESTURE_layer {
+            display-name = "GESTURE";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &kp ESC    &none  &none  &none      &none      &none                             &trans &trans &trans &trans              &none      &none         &none      &none         &none   &none
-&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6) &kp LS(N7)    &kp LS(N8) &kp LS(N9)    &kp LS(N0)  &none
+&kp TAB    &kp LWIN  &kp LALT  &kp LCTRL      &mouse_gesture   &kp LS(N5)    &trans &trans &trans &trans              &kp LS(N6) &mouse_gesture    &kp LCTRL  &kp LALT      &kp LWIN   &none
 &kp LCTRL  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT    &trans &trans &trans &trans   &kp PG_UP  &kp HOME   &kp LC(PG_UP) &kp UP     &kp LC(PG_DN) &none   &none
 &kp LSHIFT &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans &trans &trans &trans   &kp PG_DN  &kp END    &kp LEFT      &kp DOWN   &kp RIGHT     &none   &none
 &trans         &none  &trans     &trans     &trans          &trans                                          &trans     &trans                                         &trans
