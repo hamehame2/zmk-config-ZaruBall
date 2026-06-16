@@ -68,12 +68,12 @@
 
     decide {
         pattern = <GESTURE_UP>;
-        bindings = <&kp ENTER>;
+        bindings = <&kp UP>;
     };
 
     cancel {
         pattern = <GESTURE_DOWN>;
-        bindings = <&kp ESC>;
+        bindings = <&kp DOWN>;
     };
 };
 
@@ -299,7 +299,7 @@
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2      &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5                  &trans &trans &trans &trans                    &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 INT_YEN
-&to_layer_0 TAB     &kp LWIN        &kp LALT           &kp LCTRL       &mouse_gesture       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F    &mouse_gesture   &kp LCTRL     &kp LALT            &kp LWIN                  &to_layer_0 SLASH
+&to_layer_0 TAB     &kp LWIN        &kp LCTRL           &kp LALT       &mouse_gesture       &to_layer_0 J                 &trans &trans &trans &trans                    &to_layer_0 F    &mouse_gesture   &kp LALT        &kp LCTRL         &kp LWIN                  &to_layer_0 SLASH
 &kp LCTRL           &to_layer_0 A    &mkp RCLK         &mkp MCLK       &mkp_exit_AML LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &trans &trans &trans &trans   &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 S             &to_layer_0 MINUS
 &kp LSHIFT          &to_layer_0 SEMI &to_layer_0 Q     &mkp MB4        &mkp MB5            &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans &trans &trans &trans   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB5        &mkp MB4        &to_layer_0 V       &to_layer_0 Z         &lt SCROLL BACKSLASH
 &td0              &trans          &kp LWIN       &lt MUHEN BSPC  &SandS LSHFT SPACE      &trans                                               &lt RAISE RET    &lt GESTURE RET                                                               &trans
